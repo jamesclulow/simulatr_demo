@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 # new title from Ire
+=======
+# changes in Read me 
+
+>>>>>>> d8733bdd69ff4fd2efcbed778fadaf0b3a7b260d
 
 # simulatr: Generator for Reproducible Fake Data
 
