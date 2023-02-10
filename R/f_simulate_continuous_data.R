@@ -13,6 +13,7 @@
 #' @param mean2 a single numerical value. The mean of group 2.
 #' @param sd1 a single numerical value. The standard deviation of group 1.
 #' @param sd2 a single numerical value. The standard deviation of group 2.
+#' @param seed a single integer value. Sets the seed for rng.
 #'
 #' @details
 #' TODO describe
@@ -43,9 +44,11 @@ get_simulated_two_arm_means <- function(
     }
 
     # TODO create normal distributed random data for the two groups
-
-    # TODO save the fake data to a data frame in long format
-    tbl_res <- data.frame()
+    tbl_res <- data.frame(group = c(rep(1, n1), rep(2, n2)),
+                     values = c(
+                       rnorm(n = n1, mean = mean1, sd = sd1),
+                       rnorm(n = n2, mean = mean2, sd = sd2)
+                     ))
 
     # define that the result list is a class with name 'SimulationResult'
     result <- structure(list(
@@ -80,7 +83,8 @@ get_simulated_two_arm_means <- function(
 #'
 print.SimulationResult <- function(x, ...) {
     # TODO optimize the output format
-    print(class(x))
+    print(unlist(x[2:7]))
+    print(x$data)
 }
 
 #'
@@ -118,6 +122,8 @@ plot.SimulationResult <- function(
         xlab = "Group",
         ylab = "Simulated Values") {
 
-    # TODO implement the plot function
-  stop("not implemented yet")
+  p <- ggplot(x$data, aes(x = group, y = values)) +
+    geom_point() +
+    labs(title = main, x = xlab, y = ylab)
+  p
 }

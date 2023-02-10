@@ -18,6 +18,8 @@ get_simulated_two_arm_means(n1, n2, mean1, mean2, sd1, sd2, seed = NA_integer_)
 \item{sd1}{a single numerical value. The standard deviation of group 1.}
 
 \item{sd2}{a single numerical value. The standard deviation of group 2.}
+
+\item{seed}{a single integer value. Sets the seed for rng.}
 }
 \value{
 a list with all arguments and results; the output is defined as a

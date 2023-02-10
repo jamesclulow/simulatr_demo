@@ -1,4 +1,5 @@
-url: ~
+url: https://jamesclulow.github.io/simulatr_demo/
 template:
   bootstrap: 5
-
+permissions:
+  contents: write
