@@ -2,7 +2,7 @@
 
 S3method(plot,SimulationResult)
 S3method(print,SimulationResult)
-export(getSimulatedTwoArmMeans)
+export(get_simulated_two_arm_means)
 import(checkmate)
 import(graphics)
 import(methods)

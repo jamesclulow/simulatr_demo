@@ -33,7 +33,7 @@ Generic function to plot a \code{SimulationResult} object.
 Uses ggplot2 to create the plot.
 }
 \examples{
-x <- getSimulatedTwoArmMeans(n1 = 50, n2 = 50, mean1 = 5, mean2 = 7,
+x <- get_simulated_two_arm_means(n1 = 50, n2 = 50, mean1 = 5, mean2 = 7,
                              sd1 = 3, sd2 = 4, seed = 123)
 if (require(ggplot2)) plot(x)
 
